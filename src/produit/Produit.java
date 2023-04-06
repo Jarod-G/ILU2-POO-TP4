@@ -1,7 +1,7 @@
 package produit;
+import produit.Sanglier;
 
-
-public abstract class Produit {
+public abstract class Produit implements IProduit {
 	private String nom;
 	public enum Unite {LITRE, GRAMME, KILOGRAMME, CENTILITRE, MILLILITRE, PIECE}
 	protected Unite unite;
@@ -11,9 +11,17 @@ public abstract class Produit {
 		this.unite = unite;
 	}
 	
+	@Override
 	public String getNom() {
 		return nom;
 	}
 	
-	public void DescProduit(Produit produit) {}
+	@Override
+	public String DescProduit() {
+		return nom;}
+	
+	@Override
+	public int calculerPrix(int prixD){
+		return prixD;
+	}
 }

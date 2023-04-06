@@ -12,8 +12,8 @@ public class Poisson extends Produit{
 		this.unite = unite.PIECE;
 	}
 
-	public void DescProduit() {
-		System.out.println(nom + " pêchés " + date);
+	public String DescProduit() {
+		return (nom + " pêchés " + date);
 	}
 
 }

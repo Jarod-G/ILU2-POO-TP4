@@ -15,8 +15,12 @@ public class Sanglier extends Produit{
 		this.chasseur = chasseur;
 	}
 	
-	public void DescProduit() {
-		System.out.println(nom + " de " + poid + unite.KILOGRAMME + " chassé par " + chasseur);
+	public String DescProduit() {
+		return (nom + " de " + poid + " kg chassé par " + chasseur.getNom());
+	}
+	
+	public int calculerPrix(int prixD){
+		return (prixD*poid)/1000;
 	}
 
 }
